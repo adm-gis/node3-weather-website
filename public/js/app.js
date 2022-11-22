@@ -1,6 +1,4 @@
 // console.log('Client Side JS file is loaded')
-
-
 const weatherForm = document.querySelector('form')
 const search = document.querySelector('input')
 const messageOne = document.querySelector('#message-one') //querySelector matches the first element it finds
@@ -12,7 +10,7 @@ weatherForm.addEventListener('submit', (e) => {
     e.preventDefault()
     const location = search.value
     console.log('The user entered: ' + location)
-    const url = `http://localhost:3000/weather?address=${location}`
+    const url = `/weather?address=${location}`
 
     messageOne.textContent = 'Loading...'
     messageTwo.textContent = ''
