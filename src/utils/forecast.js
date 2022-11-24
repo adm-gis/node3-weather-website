@@ -12,9 +12,9 @@ const forecast = (latitude, longitude, callback) => {
         } else {
             callback(undefined, {
                 'description':"The forecast for today is: " + body.current.weather_descriptions[0] + ' with a temperature of ' + body.current.temperature + ' , feeling like ' + body.current.feelslike,
-                'temperature':body.current.temperature,
-                'feels_like':body.current.feelslike,
-                url
+                url,
+                'wind_speed': `The wind speed for today is ${body.current.wind_speed} km/h`,
+                'clouds': `The cloud cover for today is ${body.current.cloudcover}%`
             })
         }
     })
